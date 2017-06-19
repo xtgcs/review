@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2016松果"生活家年华"LIFE+演讲</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="//cdn.bootcss.com/Swiper/3.4.0/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css" >
+    <link rel="stylesheet" href="css/index.css" >
+</head>
+
+<body ng-controller="myCtrl">
+<div>
+    <!--[if lt IE 8]>
+    <p class="browsehappy">你的浏览器版本<strong>太低了</strong> 快
+        <a href="http://browsehappy.com/">升级</a>一下吧</p>
+    <![endif]-->
+</div>
+<img src="images/live_share.jpg" alt="" style="display: none">
+<div class="outline" >
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/live_banner1.jpg" alt="轮播图">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/live_banner2.jpg" alt="轮播图">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/live_banner3.jpg" alt="轮播图">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/live_banner4.jpg" alt="轮播图">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/live_banner5.jpg" alt="轮播图">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/live_banner6.jpg" alt="轮播图">
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+       <div class="content" >
+           <div class="dynamic" id="dynamic">
+                 <div class="title">"松果生活家年华" Life+演讲</div>
+                 <div class="line"></div>
+                <div class="main dynamic-content">
+                                <ul class="dynamic-list">
+                                    <li>
+
+                                        <iframe class="one_video" frameborder="0"  src="https://v.qq.com/iframe/player.html?vid=j00229zh9wa&tiny=0&auto=0" allowfullscreen></iframe>
+                                        <p class="theme">第一场-艺术滋养(2016.12.31)</p>
+                                        <p class="describe">生活家：史航、向京、 侯营、 杨树鹏、 林瀚&晚晚</p>
+                                    </li>
+                                    <li>
+
+                                        <iframe class="one_video" frameborder="0"  src="https://v.qq.com/iframe/player.html?vid=q0022ngi3zw&tiny=0&auto=0" allowfullscreen></iframe>
+                                        <p class="theme">第二场-生活方式(2017.1.1)</p>
+                                        <p class="describe">生活家：黑麦、宝哥、 Phil、 醉鹅娘</p>
+                                    </li>
+                                    <li>
+                                        <!--<a ng-href="{{list.burl}}" ng-if="list.video">-->
+                                        <!--<img ng-src="{{list.url}}" alt="" ng-show="state">-->
+                                        <!--<div class="video" ng-if="list.video" ng-click="hide()" ng-show="state">-->
+                                        <!--<img src="images/video.png" alt="">-->
+                                        <!--</div>-->
+                                        <!--</a>-->
+                                        <!--<img  ng-src="{{list.url}}" alt="" ng-if="!list.video" ng-click="big($index)">-->
+                                        <!--<iframe frameborder="0" ng-src="{{list.vurl}}" allowfullscreen></iframe>-->
+                                        <iframe class="one_video" frameborder="0"  src="https://v.qq.com/iframe/player.html?vid=e00228vvl68&tiny=0&auto=0" allowfullscreen></iframe>
+                                        <p class="theme">第三场-设计美学(2017.1.2)</p>
+                                        <p class="describe">生活家：高意静、周宸宸、 叶梓颐、 青山周平</p>
+                                    </li>
+                                </ul>
+                </div>
+           </div>
+
+       </div>
+
+   </div>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://cdn.bootcss.com/angular.js/1.2.18/angular.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+   <script src="http://cdn.bootcss.com/Swiper/3.4.1/js/swiper.min.js"></script>
+
+   <script src="js/index.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: true,
+        autoplay : 3000,
+        // 如果需要分页器
+        pagination: '.swiper-pagination'
+    });
+
+    /**
+     * Created by Action on 17/1/10.
+     */
+//    function configWxshare(m, e, t, a, i) {
+//        console.log("jinru");
+//
+//
+//    }
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://carnival.songguolife.com/weChatPay/share",
+            data: {
+                url: location.href.split("#")[0]
+            },
+            dataType: "jsonp",
+            jsonp: "jsonpcallback"
+        }).success(function(n) {
+
+           wx.config({
+                  debug: true,
+                appId: n.appId,
+                timestamp: n.timestamp,
+                nonceStr: n.noncestr,
+                signature: n.signature,
+                jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage"]
+            },
+                wx.ready(function() {
+                    console.log('jinsdscdc');
+                    var m = "2016松果生活Life+演讲",
+                    e = "最会生活的14位生活家，三场主题演讲，一席思想盛宴，快来一起听！",
+                    t = "http://carnival.songguolife.com/review",
+                    a = "..images/live_share.jpg";
+             // configWxshare(m, e, t, a, null);
+                    wx.onMenuShareTimeline({
+                            title: e,
+                            link: t,
+                            imgUrl: a,
+                            success: function() {
+                    console.log("分享");
+//                    _hmt.push(["_trackEvent", "share", "Timeline", "分享到朋友圈"]),
+//                    i && i()
+                            },
+                            cancel: function() {}
+                        },
+                        wx.onMenuShareAppMessage({
+                            title: m,
+                            desc: e,
+                            link: t,
+                            imgUrl: a,
+                            type: "",
+                            dataUrl: "",
+                            success: function() {
+                    console.log("分享2");
+//                    _hmt.push(["_trackEvent", "share", "AppMessage", "分享给好友"]),
+//                    i && i()
+                            },
+                            cancel: function() {}
+                        }))
+
+            }))
+        })
+    });
+</script>
+</body>
+</html>

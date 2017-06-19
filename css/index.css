@@ -1,0 +1,131 @@
+body{
+    background: #fff;
+
+}
+.outline{
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #1f4d86;
+}
+.banner{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 16px;
+}
+.swiper-container{
+    width: 100%;
+    height: 200px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.content{
+    margin: 0 16px;
+    background: #1f4d86;
+
+}
+
+.title{
+    color: #fff;
+    font-size: 16px;
+    padding: 16px 0;
+}
+.main{
+    overflow: hidden;
+}
+.line{
+    width: 100%;
+    height: 4px;
+    background:#f4c553;
+    margin-bottom: 24px;
+}
+.dynamic-content .dynamic-list{
+   list-style-type: none;
+   padding: 0;
+   margin-top: 0;
+}
+.dynamic-content .dynamic-list>li{
+    width: 100%;
+    /*width: 240px;*/
+    /*padding: 32px 15% 28px 15%;*/
+    padding: 32px 0 28px 0;
+    position: relative;
+    background: #fff;
+    margin-bottom: 24px;
+}
+/*.dynamic-content .dynamic-list>li a{*/
+    /*display: block;*/
+   /**/
+/*}*/
+.dynamic-content .dynamic-list>li img{
+    width: 240px;
+    height: 140px;
+    position: relative;
+    z-index: 999;
+}
+.dynamic-content .dynamic-list>li .video{
+    position: absolute;
+    top:66px;
+    left: 39.5%;
+    width: 72px;
+    height: 72px;
+    z-index: 999;
+}
+.dynamic-content .dynamic-list>li .video>img{
+    width: 100%;
+    height: 100%;
+}
+.dynamic-content .dynamic-list>li .describe{
+    /*width: 208px;*/
+    width: 70%;
+    height: 48px;
+    font-size: 15px;
+    color: #262626;
+    line-height: 1.7;
+    padding-left: 16px;
+    padding-right: 16px;
+    overflow: hidden;
+    /*text-align: left;*/
+    margin: 0 auto;
+}
+.dynamic-content .dynamic-list>li .theme{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    /*margin-top: 0;*/
+    font-size: 15px;
+    font-weight: bold;
+    color: #262626;
+}
+iframe{
+    width: 70%;
+    height: 140px;
+}
+.one_video{
+    /*position: absolute;*/
+    /*top:32px;*/
+    /*left: 15%;*/
+    margin: 0 auto;
+    margin-bottom: 24px;
+    display: block;
+}
+.swiper-pagination-bullet{
+   margin-right: 8px;
+    margin-left: 0;
+}
+.swiper-pagination-bullets span{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 1px solid #fff;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: rgba(255,255,255,0.5);
+}

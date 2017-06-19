@@ -1,0 +1,41 @@
+{
+  "banner":[
+    {
+      "url":"images/live_banner1.jpg"
+    },
+    {
+      "url":"images/live_banner2.jpg"
+    },
+    {
+      "url":"images/live_banner3.jpg"
+    },
+    {
+      "url":"images/live_banner4.jpg"
+    },
+    {
+      "url":"images/live_banner5.jpg"
+    },
+    {
+      "url":"images/live_banner6.jpg"
+    }
+  ],
+  "dynamic":[
+    {
+      "url":"http://carnival.ufile.ucloud.com.cn/video/one.jpg",
+      "vurl":"http://v.qq.com/iframe/player.html?vid=j00229zh9wa&tiny=0&auto=0",
+      "video":"true",
+      "text":"2016松果生活家年华，DAY1演讲：艺术滋养"
+    },
+    {
+      "url":"http://carnival.ufile.ucloud.com.cn/video/jianianhua_3.jpg",
+      "vurl":"http://v.qq.com/iframe/player.html?vid=q0022ngi3zw&tiny=0&auto=0",
+      "video":"true",
+      "text":"松果生活家年华 聊聊美好生活"
+    },{
+      "url":"http://carnival.ufile.ucloud.com.cn/video/jianianhua_4.jpg",
+      "vurl":"http://v.qq.com/iframe/player.html?vid=e00228vvl68&tiny=0&auto=0",
+      "video":"true",
+      "text":"松果生活家年华 聊聊艺术滋养"
+    }
+  ]
+}
